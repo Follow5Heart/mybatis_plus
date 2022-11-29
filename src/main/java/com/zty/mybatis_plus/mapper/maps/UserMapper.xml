@@ -22,6 +22,10 @@
     <update id="updateByName">
         update user set age=age where name=#{name}
     </update>
+    <update id="logicDeleteById">
+        update user set deleted=0 where id=#{id}
+    </update>
+
     <select id="getAllUsers" resultType="List" resultMap="BaseResultMap">
         select * from user
     </select>

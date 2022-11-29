@@ -200,4 +200,27 @@ public class CRUDTest {
 
 
     }
+
+    /**
+     * 通过map删除
+     */
+    @Test
+    public void deleteMap(){
+        HashMap<String, Object> map = new HashMap<>();
+
+        map.put("name","张三");
+        map.put("age",16);
+
+        int i = userMapper.deleteByMap(map);
+        System.out.println("删除了"+i);
+
+
+    }
+
+    @Test
+    public void logicDelete(){
+        int i=userMapper.logicDeleteById("1244892079889334273");
+        System.out.println("逻辑删除"+i+"行");
+
+    }
 }

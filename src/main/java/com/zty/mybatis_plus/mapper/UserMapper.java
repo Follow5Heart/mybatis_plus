@@ -28,6 +28,12 @@ public interface UserMapper extends BaseMapper<User> {
      * @return
      */
     List<User> getAllUsers();
+
+    /**
+     * @param id
+     * @return
+     */
+    int logicDeleteById(String id);
 }
 
 

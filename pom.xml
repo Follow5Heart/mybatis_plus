@@ -51,6 +51,9 @@
 
     <build>
         <!-- 项目打包时会将java目录中的*.xml文件也进行打包 -->
+        <!--  会扫描src/main/java包下的所有的xml文件 并把xml文件也会进行编译      -->
+        <!--  include 包含那些文件      -->
+        <!--  filtering的作用是是否需要对你包含的文件  里面的内容进行变量进行替换  例如 ${version}    -->
         <resources>
             <resource>
                 <directory>src/main/java</directory>
